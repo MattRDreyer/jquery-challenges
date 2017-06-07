@@ -18,6 +18,18 @@
   var saveButton = $('#save-button');
   var loadButton = $('#load-button');
 
+  saveButton.click(function() {
+  localStorage.setItem("myText", getText());
+})
+
+  loadButton.click(function() {
+  setText(localStorage.getItem("myText"));
+})
+
+
+  //localStorage.setText(textarea);  //save contents of text box when save
+  //alert("username = " + localStorage.getText("username"));  //load stored text
+
   /**
    * Gets the text from the element for you
    * @return {String}
